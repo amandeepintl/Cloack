@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Colack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-tertiary": "#ffffff",
+                            "outline": "#717970",
+                            "surface-container-highest": "#e5e2e1",
+                            "border-subtle": "#E6E6E2",
+                            "surface-dim": "#dcd9d9",
+                            "inverse-surface": "#313030",
+                            "primary": "#003b1b",
+                            "secondary": "#904d00",
+                            "on-error-container": "#93000a",
+                            "primary-fixed-dim": "#96d5a3",
+                            "on-secondary-container": "#663500",
+                            "surface-container": "#f0edec",
+                            "primary-fixed": "#b1f2be",
+                            "on-secondary": "#ffffff",
+                            "error": "#DC2626",
+                            "inverse-on-surface": "#f3f0ef",
+                            "tertiary-fixed-dim": "#ffb2bb",
+                            "on-secondary-fixed": "#2f1500",
+                            "outline-variant": "#c0c9be",
+                            "surface-bright": "#fcf9f8",
+                            "surface": "#FFFFFF",
+                            "secondary-container": "#fe932c",
+                            "surface-container-high": "#eae7e7",
+                            "tertiary-container": "#75333e",
+                            "surface-container-low": "#f6f3f2",
+                            "on-tertiary-container": "#f79eaa",
+                            "tertiary-fixed": "#ffd9dc",
+                            "on-primary-fixed-variant": "#12512c",
+                            "primary-hover": "#166534",
+                            "surface-secondary": "#F2F2EF",
+                            "surface-tint": "#2e6a41",
+                            "tertiary": "#591d28",
+                            "success": "#16A34A",
+                            "text-secondary": "#666666",
+                            "on-surface-variant": "#404941",
+                            "primary-container": "#14532d",
+                            "on-tertiary-fixed-variant": "#73323d",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-fixed-dim": "#ffb77d",
+                            "on-tertiary-fixed": "#3c0613",
+                            "on-secondary-fixed-variant": "#6e3900",
+                            "on-background": "#1c1b1b",
+                            "surface-variant": "#e5e2e1",
+                            "inverse-primary": "#96d5a3",
+                            "on-primary-container": "#87c695",
+                            "on-error": "#ffffff",
+                            "on-surface": "#1c1b1b",
+                            "on-primary": "#ffffff",
+                            "secondary-fixed": "#ffdcc3",
+                            "error-container": "#ffdad6",
+                            "background": "#F8F8F6",
+                            "on-primary-fixed": "#00210d"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "stack-lg": "32px",
+                            "container-max": "1280px",
+                            "margin-desktop": "48px",
+                            "stack-sm": "8px",
+                            "margin-mobile": "16px",
+                            "section-gap": "80px",
+                            "unit": "4px",
+                            "stack-md": "16px",
+                            "gutter": "24px"
+                        },
+                        "fontFamily": {
+                            "headline-lg-mobile": ["Sora"],
+                            "price-display": ["IBM Plex Sans"],
+                            "label-caps": ["IBM Plex Sans"],
+                            "body-md": ["Plus Jakarta Sans"],
+                            "body-lg": ["Plus Jakarta Sans"],
+                            "display": ["Sora"],
+                            "headline-md": ["Sora"],
+                            "body-sm": ["Plus Jakarta Sans"],
+                            "headline-lg": ["Sora"]
+                        },
+                        "fontSize": {
+                            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "price-display": ["20px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="font-body-md text-on-surface bg-background antialiased selection:bg-primary/10">
+
+    <!-- Header Navigation -->
+    <header class="bg-surface sticky top-0 z-50 border-b border-border-subtle h-20">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+            <div class="flex items-center gap-12">
+                <a href="./index.html" class="flex items-center">
+                    <img alt="Colack Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuoGNouXqg7NYxuaBd8niLEEGIquvz5cQqIP-vy5t-9mcWjBZgUv6PHAs5Dfk7yyR79PAe5jqU2gZvNt_wCZmOvFXvOFTd3ac8ZtU_3wMhrUDfwBHSMG3ZwWw-QdBz9Ly_XT0llN-W99vXQKy15yjpyHWS8WIVCu_70Y899_ewC5CDhRaNHgeRsAcCIIO6ytrL_rbcxx69YqR7lTtQ-W2IPlrCiLlsgi6EkHkfp4dvOMigpsgvs5Rb7MgtG">
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1">Shop</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">Categories</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">New Arrivals</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">Deals</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">Digital Products</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex relative">
+                    <input type="text" id="search-input" placeholder="Search products..." class="bg-surface-container-low border-none rounded-full px-6 py-2 w-64 text-body-sm focus:ring-1 focus:ring-primary">
+                    <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline text-xl">search</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-surface-container-low rounded-full transition-colors relative" title="Favorites">
+                        <span class="material-symbols-outlined text-on-surface">favorite</span>
+                    </button>
+                    <button class="p-2 hover:bg-surface-container-low rounded-full transition-colors relative" data-icon="shopping_cart" title="Shopping Cart">
+                        <span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+                        <span class="cart-badge-count absolute -top-1 -right-1 w-4 h-4 bg-secondary text-[10px] text-white flex items-center justify-center rounded-full font-bold" style="display: none;">0</span>
+                    </button>
+                    <button class="p-2 hover:bg-surface-container-low rounded-full transition-colors relative" data-icon="person" title="Account">
+                        <span class="material-symbols-outlined text-on-surface">person</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 lg:py-section-gap">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <!-- Image Gallery Section -->
+            <div class="lg:col-span-7 space-y-gutter">
+                <div class="rounded-xl aspect-[4/3] bg-surface border border-border-subtle overflow-hidden shadow-sm">
+                    <img id="main-product-img" src="" class="w-full h-full object-cover" alt="Primary Product Image">
+                </div>
+            </div>
+
+            <!-- Product Details Section -->
+            <div class="lg:col-span-5 flex flex-col justify-between">
+                <div>
+                    <div class="mb-4">
+                        <span id="product-brand" class="font-label-caps text-label-caps text-secondary bg-secondary-fixed/30 px-3 py-1 rounded-full uppercase tracking-widest font-bold">Colack Engineering</span>
+                    </div>
+                    <h1 id="product-name" class="font-headline-lg text-headline-lg text-primary mb-2">Studio Series Mechanical Keyboard</h1>
+                    
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="flex text-secondary" id="star-rating">
+                            <!-- Dynamically generated stars -->
+                        </div>
+                        <span id="rating-count" class="font-body-sm text-body-sm text-text-secondary border-l border-border-subtle pl-4">4.9 (124 reviews)</span>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <span id="product-price" class="font-price-display text-[32px] text-primary">$189.00</span>
+                        <span class="text-body-sm text-text-secondary ml-2">Includes global shipping</span>
+                    </div>
+                    
+                    <div class="space-y-6 mb-10 pb-10 border-b border-border-subtle" id="product-features">
+                        <!-- Custom specs -->
+                    </div>
+                </div>
+
+                <!-- Variations & Controls -->
+                <div>
+                    <div class="flex gap-4 items-center mb-6">
+                        <span class="text-body-sm text-text-secondary font-semibold">Quantity:</span>
+                        <div class="flex items-center border border-border-subtle rounded-lg bg-surface">
+                            <button class="px-4 py-2 hover:bg-surface-secondary transition-colors" id="qty-minus">-</button>
+                            <span class="px-4 py-2 font-body-md min-w-[40px] text-center" id="qty-val">1</span>
+                            <button class="px-4 py-2 hover:bg-surface-secondary transition-colors" id="qty-plus">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <button id="add-to-cart-btn" class="w-full bg-primary text-on-primary font-body-md font-semibold py-4 rounded-lg hover:bg-primary-hover transition-all active:scale-95 shadow-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details & Specs Section -->
+        <section class="mt-section-gap pt-section-gap border-t border-border-subtle">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <div class="lg:col-span-4">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-6">Technical Specifications</h2>
+                    <p class="font-body-md text-text-secondary">Engineered for endurance and tactile precision. Every product is vetted for durability and performance in demanding environments.</p>
+                </div>
+                <div class="lg:col-span-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8" id="product-specs">
+                        <!-- Dynamically filled specs table -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-secondary mt-section-gap border-t border-border-subtle">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+            <div class="col-span-2">
+                <div class="mb-6"><img src="https://lh3.googleusercontent.com/aida/AP1WRLuoGNouXqg7NYxuaBd8niLEEGIquvz5cQqIP-vy5t-9mcWjBZgUv6PHAs5Dfk7yyR79PAe5jqU2gZvNt_wCZmOvFXvOFTd3ac8ZtU_3wMhrUDfwBHSMG3ZwWw-QdBz9Ly_XT0llN-W99vXQKy15yjpyHWS8WIVCu_70Y899_ewC5CDhRaNHgeRsAcCIIO6ytrL_rbcxx69YqR7lTtQ-W2IPlrCiLlsgi6EkHkfp4dvOMigpsgvs5Rb7MgtG" alt="Colack Logo" class="h-8 w-auto object-contain"></div>
+                <p class="font-body-sm text-text-secondary max-w-xs mb-6">Engineered for the modern professional. We craft precision tools that elevate the everyday working experience through minimal design and superior materiality.</p>
+            </div>
+            <div>
+                <p class="font-label-caps text-label-caps text-primary mb-6 uppercase tracking-widest font-bold">Product</p>
+                <ul class="space-y-4">
+                    <li><a class="font-body-sm text-text-secondary hover:text-primary transition-colors" href="./shop.html">Shop</a></li>
+                    <li><a class="font-body-sm text-text-secondary hover:text-primary transition-colors" href="./shop.html">Categories</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-label-caps text-label-caps text-primary mb-6 uppercase tracking-widest font-bold">Support</p>
+                <ul class="space-y-4">
+                    <li><a class="font-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Shipping</a></li>
+                    <li><a class="font-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Returns</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-body-sm text-text-secondary">© 2024 Colack AI Marketplace. Engineered for Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Dynamic Header and State -->
+    <script type="module" src="./brand.js"></script>
+
+    <!-- Dynamic Page Content Hydrator -->
+    <script type="module">
+        import { cart } from './brand.js';
+
+        // Product Catalog
+        const catalog = {
+            prod_1: {
+                id: 'prod_1',
+                name: 'GeForce RTX 4090 Founders Edition',
+                brand: 'NVIDIA',
+                price: 149999.00,
+                rating: 4.9,
+                reviews: 128,
+                img: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Ada Lovelace Architecture', desc: 'Provides peak rendering, ray-tracing, and neural generation throughput.' },
+                    { title: '24GB GDDR6X Memory', desc: 'Essential for running large local LLMs and massive batch sizes.' },
+                    { title: 'Vapor Chamber Cooling', desc: 'Maintains whisper-quiet operations under extreme workstation loads.' }
+                ],
+                specs: {
+                    'Architecture': 'NVIDIA Ada Lovelace',
+                    'Frame Buffer': '24 GB GDDR6X',
+                    'Memory Width': '384-bit',
+                    'CUDA Cores': '16384',
+                    'Tensor Cores': '512 (4th Gen)',
+                    'Max Power': '450W'
+                }
+            },
+            prod_2: {
+                id: 'prod_2',
+                name: 'Deep Learning (Adaptive Computation)',
+                brand: "O'Reilly",
+                price: 4999.00,
+                rating: 4.8,
+                reviews: 254,
+                img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Comprehensive Mathematical Theory', desc: 'Deep dive into linear algebra, probability theory, and numerical optimization.' },
+                    { title: 'Modern Architecture Guides', desc: 'Complete mathematical breakdowns of CNNs, RNNs, and Transformer self-attention.' },
+                    { title: 'Premium Case Binding', desc: 'Hardcover binding engineered to rest flat on engineering setups.' }
+                ],
+                specs: {
+                    'Author': 'Ian Goodfellow et al.',
+                    'Pages': '800 Pages',
+                    'Publisher': 'MIT Press',
+                    'Language': 'English',
+                    'Weight': '1.4 kg',
+                    'Edition': 'Illustrated hardcover'
+                }
+            },
+            prod_3: {
+                id: 'prod_3',
+                name: 'Keychron Q1 Pro Mechanical Keyboard',
+                brand: 'Keychron',
+                price: 12999.00,
+                rating: 4.8,
+                reviews: 142,
+                img: 'https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Solid Aluminum Frame', desc: 'CNC-machined from a single block of aerospace-grade aluminum for absolute rigidity.' },
+                    { title: 'Hot-swappable PCB', desc: 'Compatible with 3-pin and 5-pin mechanical switches. No soldering required.' },
+                    { title: 'Gasket Mounted Layout', desc: 'Offers a cushioned typing feel with signature dampened acoustic feedback.' }
+                ],
+                specs: {
+                    'Chassis': 'CNC Aluminum',
+                    'Layout': '65% Form Factor',
+                    'Mounting': 'Gasket Mount',
+                    'Connectivity': 'USB-C / Bluetooth 5.1',
+                    'Switches': 'Tactile Clear Switches',
+                    'Battery Life': 'Up to 300 hrs'
+                }
+            },
+            prod_4: {
+                id: 'prod_4',
+                name: 'Architecture Oversized Hoodie',
+                brand: 'NuPhy',
+                price: 3499.00,
+                rating: 4.5,
+                reviews: 64,
+                img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Premium Heavy Cotton', desc: '450 GSM French Terry knit providing ultimate weight and structural silhouette.' },
+                    { title: 'Embroidered Accents', desc: 'Features micro-stitched neural schematics on the sleeve.' },
+                    { title: 'Double-lined Hood', desc: 'Structured hood designed to maintain form and support comfort.' }
+                ],
+                specs: {
+                    'Material': '100% Organic Cotton',
+                    'Weight': '450 GSM',
+                    'Fit': 'Oversized Structural Fit',
+                    'Care': 'Machine wash cold, air dry',
+                    'Origin': 'Ethically sourced',
+                    'Details': 'High-density embroidery'
+                }
+            },
+            prod_5: {
+                id: 'prod_5',
+                name: 'Air75 V2 Low-Profile Keyboard',
+                brand: 'NuPhy',
+                price: 7999.00,
+                rating: 4.6,
+                reviews: 45,
+                img: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Ultra-thin Chassis', desc: 'Low profile switches reduce wrist extension and fatigue.' },
+                    { title: '2.4GHz Wireless Connectivity', desc: 'Sub-1ms response rate, satisfying even demanding workflows.' },
+                    { title: 'RGB Customisation', desc: 'Double-shot PBT keycaps with customisable sidelights.' }
+                ],
+                specs: {
+                    'Height': '16 mm front height',
+                    'Layout': '75% Layout',
+                    'Switches': 'Low-profile Cowberry Switches',
+                    'Wireless': '2.4GHz / Bluetooth 5.0 / Wired',
+                    'Plate': 'Aluminum Plate',
+                    'Weight': '590 grams'
+                }
+            },
+            prod_6: {
+                id: 'prod_6',
+                name: 'Coral M.2 Accelerator Dual Edge TPU',
+                brand: 'Coral',
+                price: 6499.00,
+                rating: 4.9,
+                reviews: 22,
+                img: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: '8 TOPS Inference Power', desc: 'Dual Edge TPU modules executing 8 trillion operations per second.' },
+                    { title: 'TensorFlow Lite Native', desc: 'Run off-the-shelf mobile models directly on low-power architectures.' },
+                    { title: 'Low Power Envelope', desc: 'Vast performance enhancements consuming less than 4W total.' }
+                ],
+                specs: {
+                    'Form Factor': 'M.2 Key E-key',
+                    'Interface': 'PCIe Gen2 x1',
+                    'Accelerator': 'Google Edge TPU coprocessor (2x)',
+                    'Performance': '8 TOPS @ 4W',
+                    'Dimensions': '22 x 30 x 2.35 mm',
+                    'Supported OS': 'Debian Linux, Windows 10/11'
+                }
+            },
+            prod_7: {
+                id: 'prod_7',
+                name: 'Studio Desk Mat (Charcoal Leather)',
+                brand: 'Colack',
+                price: 2499.00,
+                rating: 4.7,
+                reviews: 73,
+                img: 'https://images.unsplash.com/photo-1632292224971-0d45778b3002?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Premium Full-Grain Leather', desc: 'Crafted from organic tanned hide that develops a beautiful patina over time.' },
+                    { title: 'Water-Resistant Coating', desc: 'Shields against accidental spills, keeping your engineering desk clean.' },
+                    { title: 'Anti-Slip Backing', desc: 'Natural suede back ensures zero shifting during heavy usage.' }
+                ],
+                specs: {
+                    'Dimensions': '900 x 400 x 4 mm',
+                    'Material': 'Full-grain vegan leather',
+                    'Edge': 'Reinforced stitching'
+                }
+            },
+            prod_8: {
+                id: 'prod_8',
+                name: 'Artisan Keycap Set (Olive Gasket)',
+                brand: 'Keychron',
+                price: 3999.00,
+                rating: 4.8,
+                reviews: 95,
+                img: 'https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Dye-Sublimated Legends', desc: 'Legends will never fade or wear off under continuous typing workloads.' },
+                    { title: 'Premium PBT Material', desc: 'Extra thick 1.5mm PBT keycaps with high oil-resistance and textured finish.' },
+                    { title: 'Cherry Profile Layout', desc: 'Ergonomic sculpt height compatible with most mechanical keyboard layouts.' }
+                ],
+                specs: {
+                    'Keys': '124 keys total',
+                    'Material': 'Dye-sub PBT',
+                    'Profile': 'Cherry Profile'
+                }
+            },
+            prod_9: {
+                id: 'prod_9',
+                name: 'Raspberry Pi 5 - 8GB Desktop Starter Kit',
+                brand: 'Raspberry Pi',
+                price: 8999.00,
+                rating: 5.0,
+                reviews: 312,
+                img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: '8GB LPDDR4X SDRAM', desc: 'Massive volatile memory suitable for local caching and edge AI computation.' },
+                    { title: 'Dual 4K Display Output', desc: 'Drive dual external monitors at 4K resolution at 60Hz.' },
+                    { title: 'Active Cooler Included', desc: 'Maintains optimal thermal profiles under high-frequency workloads.' }
+                ],
+                specs: {
+                    'Processor': 'Broadcom BCM2712 Quad-core',
+                    'RAM': '8 GB LPDDR4X',
+                    'WiFi': '2.4GHz & 5GHz 802.11ac',
+                    'Power': '5V/5A USB-C PD'
+                }
+            },
+            prod_10: {
+                id: 'prod_10',
+                name: 'Llama 3 70B Fine-Tuned Weights',
+                brand: 'Meta',
+                price: 49999.00,
+                rating: 4.9,
+                reviews: 42,
+                img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Supervised Fine-Tuned (SFT)', desc: 'Optimized for chat instruction and technical coding logic.' },
+                    { title: '8-Bit Quantized GGUF Format', desc: 'Ready for CPU and GPU inference via llama.cpp or Ollama.' },
+                    { title: 'Extended Context window', desc: 'Pre-trained with 8k token context scaling support.' }
+                ],
+                specs: {
+                    'Parameters': '70 Billion',
+                    'Quantization': '8-bit GGUF',
+                    'File Size': '48.5 GB',
+                    'Architecture': 'Llama-3 Transformer',
+                    'Tokenizer': 'Tiktoken (128k vocab)',
+                    'Use Case': 'Local assistant development'
+                }
+            },
+            prod_11: {
+                id: 'prod_11',
+                name: 'CUDA Neural Toolkit License',
+                brand: 'NVIDIA',
+                price: 29999.00,
+                rating: 4.8,
+                reviews: 18,
+                img: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Commercial Redistribution License', desc: 'Allows wrapping custom neural networks in binary releases.' },
+                    { title: 'High-Throughput Optimization', desc: 'Unlocks advanced tensor core scheduling algorithms.' },
+                    { title: 'Premium Developer Portal Access', desc: 'Direct technical support channels with Nvidia AI Engineers.' }
+                ],
+                specs: {
+                    'License Type': 'Single Developer Seat',
+                    'Validity': 'Perpetual',
+                    'Updates': '1 Year of standard updates',
+                    'Support': 'Meta-Engineering Direct Channels',
+                    'Platforms': 'Linux, Windows x86_64',
+                    'Compliance': 'Nvidia SLA Compliant'
+                }
+            },
+            prod_12: {
+                id: 'prod_12',
+                name: 'NVIDIA H100 Tensor Core GPU PCIe',
+                brand: 'NVIDIA',
+                price: 2500000.00,
+                rating: 5.0,
+                reviews: 14,
+                img: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Unprecedented AI Acceleration', desc: 'Delivers a giant leap in performance, scalability, and security for enterprise workloads.' },
+                    { title: 'Fourth-Gen Tensor Cores', desc: 'Speeds up matrix operations, delivering up to 4x faster training than A100.' },
+                    { title: 'DPX Instructions Speedup', desc: 'Accelerates dynamic programming algorithms by up to 7x.' }
+                ],
+                specs: {
+                    'Architecture': 'NVIDIA Hopper',
+                    'Memory': '80 GB HBM3',
+                    'Form Factor': 'PCIe Gen5 Dual-Slot',
+                    'Max Power': '350W',
+                    'CUDA Cores': '14592',
+                    'FP64 Performance': '34 TFLOPS'
+                }
+            },
+            prod_13: {
+                id: 'prod_13',
+                name: 'GeForce RTX 4080 Super Founders Edition',
+                brand: 'NVIDIA',
+                price: 105000.00,
+                rating: 4.8,
+                reviews: 54,
+                img: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'Ada Lovelace Efficiency', desc: 'Enormous raw power coupled with next-generation ray tracing and AI frame gen.' },
+                    { title: '16GB GDDR6X VRAM', desc: 'Excellent capacity for rendering 3D assets and running mid-sized LLMs locally.' },
+                    { title: 'Refined Axial Fans', desc: 'Fluid-dynamic bearings optimized for silent heat dispersion.' }
+                ],
+                specs: {
+                    'Architecture': 'Ada Lovelace',
+                    'Frame Buffer': '16 GB GDDR6X',
+                    'Memory Width': '256-bit',
+                    'CUDA Cores': '10240',
+                    'Tensor Cores': '320 (4th Gen)',
+                    'Max Power': '320W'
+                }
+            },
+            prod_14: {
+                id: 'prod_14',
+                name: 'AMD Radeon RX 7900 XTX Elite',
+                brand: 'AMD',
+                price: 95000.00,
+                rating: 4.7,
+                reviews: 29,
+                img: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'RDNA 3 Chiplet Technology', desc: 'World first chiplet GPU offering massive graphics power and power-efficiency.' },
+                    { title: '24GB High-Speed VRAM', desc: 'Immense video memory buffer suitable for 4K video rendering and texture packs.' },
+                    { title: 'AMD Radiance Display Engine', desc: 'Supports DisplayPort 2.1 outputs driving up to 8K resolution at 165Hz.' }
+                ],
+                specs: {
+                    'Architecture': 'AMD RDNA 3',
+                    'Memory Size': '24 GB GDDR6',
+                    'Memory Interface': '384-bit',
+                    'Stream Processors': '6144',
+                    'Ray Accelerators': '96',
+                    'Max Power': '355W'
+                }
+            },
+            prod_15: {
+                id: 'prod_15',
+                name: 'Designing Data-Intensive Applications',
+                brand: "O'Reilly",
+                price: 1599.00,
+                rating: 4.9,
+                reviews: 842,
+                img: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&auto=format&fit=crop&q=80',
+                features: [
+                    { title: 'System Architecture Classic', desc: 'The definitive guide to understanding databases, caching, and stream processing.' },
+                    { title: 'Distributed Systems Blueprint', desc: 'In-depth coverage of replication, partitioning, and consensus models.' },
+                    { title: 'Authoritative Insight', desc: 'Written by Martin Kleppmann to bridge the gap between theory and practical designs.' }
+                ],
+                specs: {
+                    'Author': 'Martin Kleppmann',
+                    'Publisher': 'O\'Reilly Media',
+                    'Pages': '611 Pages',
+                    'Language': 'English',
+                    'Format': 'Hardcover / eBook',
+                    'Category': 'Distributed Systems'
+                }
+            }
+        };
+
+        // Determine active product
+        const params = new URLSearchParams(window.location.search);
+        const prodId = params.get('id') || 'prod_3';
+        const product = catalog[prodId] || catalog.prod_3;
+
+        // Populate elements
+        document.getElementById('main-product-img').src = product.img;
+        document.getElementById('product-brand').textContent = product.brand;
+        document.getElementById('product-name').textContent = product.name;
+        document.getElementById('rating-count').textContent = `${product.rating} (${product.reviews} reviews)`;
+        document.getElementById('product-price').textContent = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(product.price);
+
+        // Populate stars
+        const starsContainer = document.getElementById('star-rating');
+        const wholeStars = Math.floor(product.rating);
+        const hasHalf = product.rating % 1 !== 0;
+        for (let i = 0; i < 5; i++) {
+            const star = document.createElement('span');
+            star.className = 'material-symbols-outlined text-[18px]';
+            if (i < wholeStars) {
+                star.textContent = 'star';
+                star.style.variationSettings = "'FILL' 1";
+            } else if (i === wholeStars && hasHalf) {
+                star.textContent = 'star_half';
+                star.style.variationSettings = "'FILL' 1";
+            } else {
+                star.textContent = 'star';
+            }
+            starsContainer.appendChild(star);
+        }
+
+        // Populate features
+        const featuresContainer = document.getElementById('product-features');
+        product.features.forEach(f => {
+            const featDiv = document.createElement('div');
+            featDiv.className = 'flex items-start gap-4';
+            
+            let icon = 'deployed_code';
+            if (f.title.includes('PCB') || f.title.includes('Accelerator')) icon = 'swap_horiz';
+            else if (f.title.includes('Design') || f.title.includes('Knit') || f.title.includes('Chassis')) icon = 'architecture';
+
+            featDiv.innerHTML = `
+                <span class="material-symbols-outlined text-primary p-2 bg-primary/5 rounded-lg">${icon}</span>
+                <div>
+                    <p class="font-body-md font-semibold text-primary">${f.title}</p>
+                    <p class="font-body-sm text-text-secondary">${f.desc}</p>
+                </div>
+            `;
+            featuresContainer.appendChild(featDiv);
+        });
+
+        // Populate specs
+        const specsContainer = document.getElementById('product-specs');
+        for (const [key, value] of Object.entries(product.specs)) {
+            const specDiv = document.createElement('div');
+            specDiv.className = 'border-b border-border-subtle pb-4 flex justify-between';
+            
+            const keySpan = document.createElement('span');
+            keySpan.className = 'font-label-caps text-label-caps text-text-secondary';
+            keySpan.textContent = key;
+
+            const valSpan = document.createElement('span');
+            valSpan.className = 'font-body-sm text-on-surface font-medium';
+            valSpan.textContent = value;
+
+            specDiv.appendChild(keySpan);
+            specDiv.appendChild(valSpan);
+            specsContainer.appendChild(specDiv);
+        }
+
+        // Handle Quantity Buttons
+        const qtyVal = document.getElementById('qty-val');
+        let currentQty = 1;
+
+        document.getElementById('qty-minus').onclick = () => {
+            currentQty = Math.max(1, currentQty - 1);
+            qtyVal.textContent = currentQty;
+        };
+
+        document.getElementById('qty-plus').onclick = () => {
+            currentQty++;
+            qtyVal.textContent = currentQty;
+        };
+
+        // Add to Cart handler
+        document.getElementById('add-to-cart-btn').onclick = () => {
+            cart.add({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                img: product.img,
+                quantity: currentQty
+            });
+        };
+    </script>
+</body>
+</html>

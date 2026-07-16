@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Colack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "tertiary-fixed": "#ffd9dc",
+                            "tertiary-fixed-dim": "#ffb2bb",
+                            "on-surface-variant": "#404941",
+                            "inverse-primary": "#96d5a3",
+                            "surface-tint": "#2e6a41",
+                            "on-primary-fixed": "#00210d",
+                            "inverse-on-surface": "#f3f0ef",
+                            "border-subtle": "#E6E6E2",
+                            "on-primary-fixed-variant": "#12512c",
+                            "secondary": "#904d00",
+                            "outline": "#717970",
+                            "outline-variant": "#c0c9be",
+                            "on-tertiary-fixed-variant": "#73323d",
+                            "on-error": "#ffffff",
+                            "secondary-fixed-dim": "#ffb77d",
+                            "on-tertiary-fixed": "#3c0613",
+                            "surface-container-low": "#f6f3f2",
+                            "primary-fixed-dim": "#96d5a3",
+                            "surface-container-high": "#eae7e7",
+                            "surface-bright": "#fcf9f8",
+                            "secondary-fixed": "#ffdcc3",
+                            "primary-fixed": "#b1f2be",
+                            "background": "#F8F8F6",
+                            "primary-container": "#14532d",
+                            "on-secondary-fixed-variant": "#6e3900",
+                            "success": "#16A34A",
+                            "on-tertiary-container": "#f79eaa",
+                            "on-surface": "#1c1b1b",
+                            "tertiary": "#591d28",
+                            "surface-secondary": "#F2F2EF",
+                            "primary-hover": "#166534",
+                            "tertiary-container": "#75333e",
+                            "on-tertiary": "#ffffff",
+                            "on-background": "#1c1b1b",
+                            "on-error-container": "#93000a",
+                            "secondary-container": "#fe932c",
+                            "on-primary": "#ffffff",
+                            "surface-variant": "#e5e2e1",
+                            "surface-dim": "#dcd9d9",
+                            "surface": "#FFFFFF",
+                            "error-container": "#ffdad6",
+                            "error": "#DC2626",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-container": "#f0edec",
+                            "on-secondary": "#ffffff",
+                            "surface-container-highest": "#e5e2e1",
+                            "text-secondary": "#666666",
+                            "primary": "#003b1b",
+                            "on-secondary-fixed": "#2f1500",
+                            "on-primary-container": "#87c695",
+                            "inverse-surface": "#313030",
+                            "on-secondary-container": "#663500"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "gutter": "24px",
+                            "stack-md": "16px",
+                            "section-gap": "80px",
+                            "unit": "4px",
+                            "margin-mobile": "16px",
+                            "stack-lg": "32px",
+                            "stack-sm": "8px",
+                            "margin-desktop": "48px",
+                            "container-max": "1280px"
+                        },
+                        "fontFamily": {
+                            "headline-lg": ["Sora"],
+                            "price-display": ["IBM Plex Sans"],
+                            "display": ["Sora"],
+                            "body-lg": ["Plus Jakarta Sans"],
+                            "body-sm": ["Plus Jakarta Sans"],
+                            "label-caps": ["IBM Plex Sans"],
+                            "body-md": ["Plus Jakarta Sans"],
+                            "headline-md": ["Sora"],
+                            "headline-lg-mobile": ["Sora"]
+                        },
+                        "fontSize": {
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                            "price-display": ["20px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                            "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+
+    <!-- Header Navigation -->
+    <header class="w-full h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center bg-surface border-b border-border-subtle">
+        <a href="./index.html" class="font-display text-headline-md text-primary tracking-tight"><img src="https://lh3.googleusercontent.com/aida/AP1WRLuoGNouXqg7NYxuaBd8niLEEGIquvz5cQqIP-vy5t-9mcWjBZgUv6PHAs5Dfk7yyR79PAe5jqU2gZvNt_wCZmOvFXvOFTd3ac8ZtU_3wMhrUDfwBHSMG3ZwWw-QdBz9Ly_XT0llN-W99vXQKy15yjpyHWS8WIVCu_70Y899_ewC5CDhRaNHgeRsAcCIIO6ytrL_rbcxx69YqR7lTtQ-W2IPlrCiLlsgi6EkHkfp4dvOMigpsgvs5Rb7MgtG" alt="Colack" class="h-8 w-auto"></a>
+        <div class="hidden md:flex gap-6 items-center">
+            <span class="text-text-secondary font-body-sm">Already have an account?</span>
+            <a href="./login.html" class="text-primary font-body-sm font-semibold hover:opacity-80 transition-opacity">Sign In</a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center py-12 px-6">
+        <div class="w-full max-w-[480px] bg-surface rounded-xl p-8 border border-border-subtle shadow-md">
+            
+            <!-- Heading -->
+            <div class="text-center mb-6">
+                <h1 class="font-headline-lg text-headline-lg mb-2">Create an account</h1>
+                <p class="font-body-md text-body-md text-text-secondary">Start your journey with Colack's intelligent ecosystem.</p>
+            </div>
+
+            <!-- Form -->
+            <form id="signup-form" class="space-y-4">
+                <div class="space-y-1">
+                    <label for="name" class="font-body-sm text-body-sm text-text-secondary ml-1">Full Name</label>
+                    <input type="text" id="name" placeholder="Alex Mercer" required class="w-full px-4 py-3 border border-border-subtle rounded-lg bg-surface focus:ring-primary focus:border-primary">
+                </div>
+
+                <div class="space-y-1">
+                    <label for="email" class="font-body-sm text-body-sm text-text-secondary ml-1">Email Address</label>
+                    <input type="email" id="email" placeholder="name@company.com" required class="w-full px-4 py-3 border border-border-subtle rounded-lg bg-surface focus:ring-primary focus:border-primary">
+                </div>
+
+                <div class="space-y-1">
+                    <label for="password" class="font-body-sm text-body-sm text-text-secondary ml-1">Password</label>
+                    <input type="password" id="password" placeholder="Min. 8 characters" required minlength="8" class="w-full px-4 py-3 border border-border-subtle rounded-lg bg-surface focus:ring-primary focus:border-primary">
+                </div>
+
+                <div class="flex items-center gap-2 pt-2">
+                    <input type="checkbox" id="terms" required class="rounded border-border-subtle text-primary focus:ring-primary h-4 w-4">
+                    <label for="terms" class="text-body-sm text-text-secondary">I agree to the <a href="#" class="text-primary hover:underline font-medium">Terms of Service</a> &amp; <a href="#" class="text-primary hover:underline font-medium">Privacy Policy</a>.</label>
+                </div>
+
+                <button type="submit" id="signup-submit" class="w-full py-4 bg-primary text-on-primary font-body-md font-semibold rounded-lg hover:bg-primary-hover active:scale-[0.98] transition-all flex items-center justify-center font-bold">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="mt-6 flex justify-center text-body-sm text-text-secondary md:hidden">
+                <span>Already have an account? <a href="./login.html" class="text-primary font-semibold hover:underline">Sign In</a></span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dynamic Header State / Sync -->
+    <script type="module" src="./brand.js"></script>
+
+    <!-- Firebase Signup Script -->
+    <script type="module">
+        import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { app, auth } from "./firebase-config.js";
+        import { showToast } from "./brand.js";
+
+        const form = document.getElementById('signup-form');
+        const submitBtn = document.getElementById('signup-submit');
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Creating Account...';
+
+            try {
+                // Create user
+                const credential = await createUserWithEmailAndPassword(auth, email, password);
+                
+                // Update profile display name
+                await updateProfile(credential.user, {
+                    displayName: name
+                });
+
+                showToast(`Successfully registered account for ${email}!`);
+                setTimeout(() => {
+                    window.location.href = './index.html';
+                }, 1500);
+
+            } catch (error) {
+                console.error(error);
+                showToast(error.message, "error");
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Create Account';
+            }
+        };
+    </script>
+</body>
+</html>

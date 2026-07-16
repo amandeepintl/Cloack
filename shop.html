@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Curated AI Gear - Colack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-tertiary": "#ffffff",
+                            "outline": "#717970",
+                            "surface-container-highest": "#e5e2e1",
+                            "border-subtle": "#E6E6E2",
+                            "surface-dim": "#dcd9d9",
+                            "inverse-surface": "#313030",
+                            "primary": "#003b1b",
+                            "secondary": "#904d00",
+                            "on-error-container": "#93000a",
+                            "primary-fixed-dim": "#96d5a3",
+                            "on-secondary-container": "#663500",
+                            "surface-container": "#f0edec",
+                            "primary-fixed": "#b1f2be",
+                            "on-secondary": "#ffffff",
+                            "error": "#DC2626",
+                            "inverse-on-surface": "#f3f0ef",
+                            "tertiary-fixed-dim": "#ffb2bb",
+                            "on-secondary-fixed": "#2f1500",
+                            "outline-variant": "#c0c9be",
+                            "surface-bright": "#fcf9f8",
+                            "surface": "#FFFFFF",
+                            "secondary-container": "#fe932c",
+                            "surface-container-high": "#eae7e7",
+                            "tertiary-container": "#75333e",
+                            "surface-container-low": "#f6f3f2",
+                            "on-tertiary-container": "#f79eaa",
+                            "tertiary-fixed": "#ffd9dc",
+                            "on-primary-fixed-variant": "#12512c",
+                            "primary-hover": "#166534",
+                            "surface-secondary": "#F2F2EF",
+                            "surface-tint": "#2e6a41",
+                            "tertiary": "#591d28",
+                            "success": "#16A34A",
+                            "text-secondary": "#666666",
+                            "on-surface-variant": "#404941",
+                            "primary-container": "#14532d",
+                            "on-tertiary-fixed-variant": "#73323d",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-fixed-dim": "#ffb77d",
+                            "on-tertiary-fixed": "#3c0613",
+                            "on-secondary-fixed-variant": "#6e3900",
+                            "on-background": "#1c1b1b",
+                            "surface-variant": "#e5e2e1",
+                            "inverse-primary": "#96d5a3",
+                            "on-primary-container": "#87c695",
+                            "on-error": "#ffffff",
+                            "on-surface": "#1c1b1b",
+                            "on-primary": "#ffffff",
+                            "secondary-fixed": "#ffdcc3",
+                            "error-container": "#ffdad6",
+                            "background": "#F8F8F6",
+                            "on-primary-fixed": "#00210d"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "stack-lg": "32px",
+                            "container-max": "1280px",
+                            "margin-desktop": "48px",
+                            "stack-sm": "8px",
+                            "margin-mobile": "16px",
+                            "section-gap": "80px",
+                            "unit": "4px",
+                            "stack-md": "16px",
+                            "gutter": "24px"
+                        },
+                        "fontFamily": {
+                            "headline-lg-mobile": ["Sora"],
+                            "price-display": ["IBM Plex Sans"],
+                            "label-caps": ["IBM Plex Sans"],
+                            "body-md": ["Plus Jakarta Sans"],
+                            "body-lg": ["Plus Jakarta Sans"],
+                            "display": ["Sora"],
+                            "headline-md": ["Sora"],
+                            "body-sm": ["Plus Jakarta Sans"],
+                            "headline-lg": ["Sora"]
+                        },
+                        "fontSize": {
+                            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "price-display": ["20px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased">
+
+    <!-- Header Navigation -->
+    <header class="bg-surface sticky top-0 z-50 border-b border-border-subtle h-20">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+            <div class="flex items-center gap-12">
+                <a href="./index.html" class="flex items-center">
+                    <img alt="Colack Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuoGNouXqg7NYxuaBd8niLEEGIquvz5cQqIP-vy5t-9mcWjBZgUv6PHAs5Dfk7yyR79PAe5jqU2gZvNt_wCZmOvFXvOFTd3ac8ZtU_3wMhrUDfwBHSMG3ZwWw-QdBz9Ly_XT0llN-W99vXQKy15yjpyHWS8WIVCu_70Y899_ewC5CDhRaNHgeRsAcCIIO6ytrL_rbcxx69YqR7lTtQ-W2IPlrCiLlsgi6EkHkfp4dvOMigpsgvs5Rb7MgtG">
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1">Shop</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">Categories</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">New Arrivals</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">Deals</a>
+                    <a href="./shop.html" class="font-label-caps text-label-caps text-text-secondary hover:text-primary transition-colors">Digital Products</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex relative">
+                    <input type="text" id="search-input" placeholder="Search products..." class="bg-surface-container-low border-none rounded-full px-6 py-2 w-64 text-body-sm focus:ring-1 focus:ring-primary">
+                    <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline text-xl">search</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-surface-container-low rounded-full transition-colors relative" title="Favorites">
+                        <span class="material-symbols-outlined text-on-surface">favorite</span>
+                    </button>
+                    <button class="p-2 hover:bg-surface-container-low rounded-full transition-colors relative" data-icon="shopping_cart" title="Shopping Cart">
+                        <span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+                        <span class="cart-badge-count absolute -top-1 -right-1 w-4 h-4 bg-secondary text-[10px] text-white flex items-center justify-center rounded-full font-bold" style="display: none;">0</span>
+                    </button>
+                    <button class="p-2 hover:bg-surface-container-low rounded-full transition-colors relative" data-icon="person" title="Account">
+                        <span class="material-symbols-outlined text-on-surface">person</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap animate-fadeIn">
+        <div class="flex flex-col md:flex-row gap-gutter">
+            
+            <!-- Left Sidebar Filters -->
+            <aside class="w-full md:w-64 flex-shrink-0 space-y-stack-lg">
+                <div class="sticky top-28 bg-surface p-6 rounded-xl border border-border-subtle">
+                    <h2 class="font-headline-md text-headline-md mb-6">Filters</h2>
+                    
+                    <!-- Categories -->
+                    <div class="mb-6">
+                        <h3 class="font-label-caps text-label-caps text-text-secondary mb-3 uppercase font-semibold select-none cursor-default">Category</h3>
+                        <div class="space-y-2" id="category-filters">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" value="hardware" checked class="rounded border-border-subtle text-primary focus:ring-primary h-4 w-4">
+                                <span class="text-body-sm group-hover:text-primary transition-colors select-none">Computing Hardware</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" value="books" checked class="rounded border-border-subtle text-primary focus:ring-primary h-4 w-4">
+                                <span class="text-body-sm group-hover:text-primary transition-colors select-none">Learning &amp; Books</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Brands -->
+                    <div class="mb-6">
+                        <h3 class="font-label-caps text-label-caps text-text-secondary mb-3 uppercase font-semibold select-none cursor-default">Brand</h3>
+                        <div class="space-y-2" id="brand-filters">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" value="nvidia" checked class="rounded border-border-subtle text-primary focus:ring-primary h-4 w-4">
+                                <span class="text-body-sm group-hover:text-primary transition-colors select-none">NVIDIA</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" value="amd" checked class="rounded border-border-subtle text-primary focus:ring-primary h-4 w-4">
+                                <span class="text-body-sm group-hover:text-primary transition-colors select-none">AMD</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" value="oreilly" checked class="rounded border-border-subtle text-primary focus:ring-primary h-4 w-4">
+                                <span class="text-body-sm group-hover:text-primary transition-colors select-none">O'Reilly</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Range -->
+                    <div class="mb-6">
+                        <h3 class="font-label-caps text-label-caps text-text-secondary mb-3 uppercase font-semibold">Max Price</h3>
+                        <input type="range" id="price-range" min="1000" max="2500000" step="10000" value="2500000" class="w-full h-1 bg-surface-secondary rounded-lg appearance-none cursor-pointer accent-primary">
+                        <div class="flex justify-between mt-2 text-label-caps font-label-caps text-text-secondary select-none">
+                            <span>₹1,000</span>
+                            <span class="font-bold text-primary" id="price-indicator">₹25,00,000+</span>
+                        </div>
+                    </div>
+
+                    <button id="reset-filters" class="w-full py-2 border border-border-subtle rounded-lg text-body-sm font-semibold hover:bg-surface-secondary transition-colors">Reset Filters</button>
+                </div>
+            </aside>
+            
+            <!-- Product Grid Section -->
+            <section class="flex-grow">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-body-sm text-text-secondary" id="results-count">Showing 6 of 6 products</span>
+                    <div class="flex items-center gap-2">
+                        <span class="text-label-caps font-label-caps text-text-secondary select-none cursor-default">Sort by:</span>
+                        <select id="sort-select" class="border-none bg-transparent font-body-sm focus:ring-0 cursor-pointer text-primary font-semibold">
+                            <option value="default">Newest Arrivals</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Main Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter" id="product-grid">
+                    <!-- Products will be generated dynamically by JS for smooth local searching -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-secondary dark:bg-surface-dim mt-section-gap border-t border-border-subtle">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+            <div class="col-span-2">
+                <a href="./index.html" class="block h-10 mb-4"><img src="https://lh3.googleusercontent.com/aida/AP1WRLuoGNouXqg7NYxuaBd8niLEEGIquvz5cQqIP-vy5t-9mcWjBZgUv6PHAs5Dfk7yyR79PAe5jqU2gZvNt_wCZmOvFXvOFTd3ac8ZtU_3wMhrUDfwBHSMG3ZwWw-QdBz9Ly_XT0llN-W99vXQKy15yjpyHWS8WIVCu_70Y899_ewC5CDhRaNHgeRsAcCIIO6ytrL_rbcxx69YqR7lTtQ-W2IPlrCiLlsgi6EkHkfp4dvOMigpsgvs5Rb7MgtG" alt="Colack Logo" class="h-full w-auto object-contain"></a>
+                <p class="text-body-sm text-text-secondary max-w-xs mb-6">
+                    Curating the world's most advanced technology for creators, engineers, and future-thinkers. Experience the benchmark of excellence.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-primary mb-4 font-bold">Marketplace</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="./shop.html">Shop</a></li>
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="./shop.html">Categories</a></li>
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="./shop.html">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-primary mb-4 font-bold">Support</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Help Center</a></li>
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Returns</a></li>
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-primary mb-4 font-bold">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-body-sm text-body-sm text-text-secondary">© 2024 Colack AI Marketplace. Engineered for Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Dynamic Header and State -->
+    <script type="module" src="./brand.js"></script>
+
+    <!-- Client-Side Search and Dynamic Rendering Engine -->
+    <script type="module">
+        import { cart, products } from './brand.js';
+
+        const grid = document.getElementById('product-grid');
+        const resultsCount = document.getElementById('results-count');
+        const priceRange = document.getElementById('price-range');
+        const priceIndicator = document.getElementById('price-indicator');
+        const sortSelect = document.getElementById('sort-select');
+        const resetBtn = document.getElementById('reset-filters');
+        
+        // Parse Query Params
+        const params = new URLSearchParams(window.location.search);
+        let currentSearch = params.get('search') || '';
+        let initialCategory = params.get('category') || '';
+        
+        if (currentSearch) {
+            const headerSearch = document.getElementById('search-input');
+            if (headerSearch) headerSearch.value = currentSearch;
+        }
+
+        // Setup filter parameters
+        const selectedCategories = new Set(['hardware', 'books']);
+        const selectedBrands = new Set(['nvidia', 'amd', 'oreilly']);
+        let maxPrice = 2500000; // Scaled to allow H100 GPU (₹25 Lakhs)
+
+        // Apply URL category filters on load
+        if (initialCategory) {
+            selectedCategories.clear();
+            selectedCategories.add(initialCategory);
+            document.querySelectorAll('#category-filters input').forEach(cb => {
+                cb.checked = (cb.value === initialCategory);
+            });
+        }
+
+        // Render function
+        function render() {
+            let filtered = products.filter(p => {
+                const matchesSearch = p.name.toLowerCase().includes(currentSearch.toLowerCase()) || p.brand.toLowerCase().includes(currentSearch.toLowerCase());
+                const matchesCategory = selectedCategories.has(p.category.toLowerCase());
+                
+                const normBrand = p.brand.toLowerCase().replace(/[^a-z0-9]/g, '');
+                const matchesBrand = selectedBrands.has(normBrand);
+                
+                const matchesPrice = p.price <= maxPrice;
+                return matchesSearch && matchesCategory && matchesBrand && matchesPrice;
+            });
+
+            // Sorting
+            const sortVal = sortSelect.value;
+            if (sortVal === 'low-high') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortVal === 'high-low') {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (sortVal === 'popular') {
+                filtered.sort((a, b) => b.rating - a.rating || b.reviews - a.reviews);
+            }
+
+            // Update UI count
+            resultsCount.textContent = `Showing ${filtered.length} of ${products.length} products`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-16 flex flex-col items-center justify-center text-center">
+                        <span class="material-symbols-outlined text-outline text-5xl mb-4 select-none cursor-default">search_off</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2 select-none cursor-default">No matching products</h3>
+                        <p class="font-body-sm text-body-sm text-text-secondary select-none cursor-default">Try adjusting your filters or search criteria.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Build grid HTML using DOM operations for security against HTML injections
+            grid.innerHTML = '';
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'group bg-surface rounded-xl p-6 transition-all duration-300 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.08)] border border-border-subtle relative flex flex-col justify-between';
+                
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'aspect-square bg-surface-secondary rounded-lg mb-4 overflow-hidden relative';
+                
+                const link = document.createElement('a');
+                link.href = `./product-detail.html?id=${p.id}`;
+                
+                const img = document.createElement('img');
+                img.className = 'w-full h-full object-cover transition-transform duration-700 group-hover:scale-105';
+                img.src = p.img;
+                img.alt = p.name;
+                
+                link.appendChild(img);
+                imgContainer.appendChild(link);
+
+                if (p.badge) {
+                    const badgeSpan = document.createElement('span');
+                    badgeSpan.className = 'absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 rounded-full text-label-caps font-label-caps text-[10px] font-bold';
+                    badgeSpan.textContent = p.badge;
+                    imgContainer.appendChild(badgeSpan);
+                }
+
+                const addBtn = document.createElement('button');
+                addBtn.className = 'absolute bottom-4 right-4 bg-primary text-on-primary w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-primary-hover active:scale-90 shadow-md';
+                addBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>';
+                addBtn.onclick = (e) => {
+                    e.preventDefault();
+                    cart.add(p);
+                };
+                imgContainer.appendChild(addBtn);
+
+                const infoDiv = document.createElement('div');
+                infoDiv.className = 'space-y-1';
+                
+                const brandP = document.createElement('p');
+                brandP.className = 'font-label-caps text-label-caps text-text-secondary uppercase';
+                brandP.textContent = p.brand;
+
+                const nameH = document.createElement('h4');
+                nameH.className = 'font-headline-md text-body-lg font-semibold group-hover:text-primary transition-colors truncate';
+                
+                const nameLink = document.createElement('a');
+                nameLink.href = `./product-detail.html?id=${p.id}`;
+                nameLink.textContent = p.name;
+                nameH.appendChild(nameLink);
+
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'flex items-center gap-1 mb-2';
+                ratingDiv.innerHTML = `
+                    <span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-body-sm font-semibold">${p.rating}</span>
+                    <span class="text-label-caps text-text-secondary ml-1">(${p.reviews})</span>
+                `;
+
+                infoDiv.appendChild(brandP);
+                infoDiv.appendChild(nameH);
+                infoDiv.appendChild(ratingDiv);
+
+                const footerDiv = document.createElement('div');
+                footerDiv.className = 'flex justify-between items-end pt-2 mt-auto';
+                
+                const priceSpan = document.createElement('span');
+                priceSpan.className = 'font-price-display text-price-display text-primary';
+                priceSpan.textContent = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(p.price);
+
+                footerDiv.appendChild(priceSpan);
+
+                card.appendChild(imgContainer);
+                card.appendChild(infoDiv);
+                card.appendChild(footerDiv);
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Handlers
+        document.querySelectorAll('#category-filters input').forEach(cb => {
+            cb.onchange = () => {
+                if (cb.checked) selectedCategories.add(cb.value);
+                else selectedCategories.delete(cb.value);
+                render();
+            };
+        });
+
+        document.querySelectorAll('#brand-filters input').forEach(cb => {
+            cb.onchange = () => {
+                if (cb.checked) selectedBrands.add(cb.value);
+                else selectedBrands.delete(cb.value);
+                render();
+            };
+        });
+
+        priceRange.oninput = (e) => {
+            maxPrice = parseInt(e.target.value);
+            priceIndicator.textContent = maxPrice === 2500000 ? '₹25,00,000+' : new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(maxPrice);
+            render();
+        };
+
+        sortSelect.onchange = render;
+
+        resetBtn.onclick = () => {
+            selectedCategories.clear();
+            ['hardware', 'books'].forEach(c => selectedCategories.add(c));
+            selectedBrands.clear();
+            ['nvidia', 'amd', 'oreilly'].forEach(b => selectedBrands.add(b));
+            maxPrice = 2500000;
+            priceRange.value = 2500000;
+            priceIndicator.textContent = '₹25,00,000+';
+            
+            document.querySelectorAll('#category-filters input, #brand-filters input').forEach(cb => cb.checked = true);
+            render();
+        };
+
+        // Listen for Search bar inputs
+        const headerSearch = document.getElementById('search-input');
+        if (headerSearch) {
+            headerSearch.oninput = (e) => {
+                currentSearch = e.target.value;
+                render();
+            };
+        }
+
+        // Run initial render
+        render();
+    </script>
+</body>
+</html>
